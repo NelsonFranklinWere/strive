@@ -1,0 +1,194 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  --font-poppins: 'Poppins', sans-serif;
+  --font-space-grotesk: 'Space Grotesk', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-poppins);
+  color: #1F2937;
+  background-color: #FFFFFF;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F3F4F6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #0D1B2A, #4A00E0);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #4A00E0, #00F5D4);
+}
+
+/* Glassmorphism Effect */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-dark {
+  background: rgba(26, 26, 26, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(135deg, #00F5D4, #4A00E0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Updated gradient text variations */
+.gradient-text-aqua {
+  background: linear-gradient(135deg, #00F5D4, #0D1B2A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-purple {
+  background: linear-gradient(135deg, #4A00E0, #00F5D4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Animated Background */
+.animated-gradient {
+  background: linear-gradient(-45deg, #0D1B2A, #4A00E0, #00F5D4, #4A00E0);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+/* Mesh Gradient Background */
+.mesh-gradient {
+  background: 
+    radial-gradient(at 0% 0%, rgba(74, 0, 224, 0.3) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(0, 245, 212, 0.2) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(74, 0, 224, 0.2) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(0, 245, 212, 0.3) 0px, transparent 50%);
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Particle Effect Background */
+.particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(0, 245, 212, 0.3);
+  animation: float 20s infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+  }
+  25% {
+    transform: translateY(-100px) translateX(50px);
+  }
+  50% {
+    transform: translateY(-200px) translateX(-50px);
+  }
+  75% {
+    transform: translateY(-100px) translateX(100px);
+  }
+}
+
+/* Button Hover Effects */
+.btn-hover-glow {
+  transition: all 0.3s ease;
+}
+
+.btn-hover-glow:hover {
+  box-shadow: 0 0 30px rgba(0, 245, 212, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Card Hover Effects */
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Loading Spinner */
+.spinner {
+  border: 3px solid rgba(0, 245, 212, 0.1);
+  border-top: 3px solid #00F5D4;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Smooth Fade In */
+.fade-in {
+  animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

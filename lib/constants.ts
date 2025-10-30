@@ -1,0 +1,356 @@
+import { Product, Testimonial, TeamMember } from './types'
+
+export const COMPANY_INFO = {
+  name: 'StriveGo',
+  tagline: "Empowering Startups. Automating Growth. Building Africa's Digital Future.",
+  mission: 'To bridge African entrepreneurship and global technology through AI, automation, and human-centered innovation.',
+  vision: "To become Africa's leading innovation hub, powering 1,000+ startups with intelligent systems by 2030.",
+  phone: '+254 743 869 564',
+  email: 'info@strivego.online',
+  address: 'Nairobi CBD, Kenya',
+  whatsapp: 'https://wa.me/254743869564',
+  social: {
+    twitter: 'https://twitter.com/OchiengNe88651',
+    linkedin: 'https://www.linkedin.com/in/stivego-company-729746386/',
+    facebook: 'https://www.facebook.com/profile.php?id=61581393475109',
+    instagram: 'https://www.instagram.com/strivego4/',
+    tiktok: 'https://www.tiktok.com/@strivego',
+    github: 'https://github.com/Nelsonfrank516',
+  },
+  location: {
+    lat: -1.286389,
+    lng: 36.817223,
+  },
+}
+
+export const CORE_VALUES = [
+  {
+    icon: '💡',
+    title: 'Innovation',
+    description: 'We embrace cutting-edge technology and creative solutions.',
+  },
+  {
+    icon: '🤝',
+    title: 'Integrity',
+    description: 'We build trust through transparency and ethical practices.',
+  },
+  {
+    icon: '🌟',
+    title: 'Excellence',
+    description: 'We strive for perfection in every project we deliver.',
+  },
+  {
+    icon: '👥',
+    title: 'Collaboration',
+    description: 'We believe in the power of teamwork and partnership.',
+  },
+  {
+    icon: '🚀',
+    title: 'Growth Mindset',
+    description: 'We continuously learn and adapt to exceed expectations.',
+  },
+]
+
+export const STATS: { value: number; label: string; suffix?: string }[] = [
+  { value: 20, label: 'Systems Built', suffix: '+' },
+  { value: 50, label: 'Clients Served', suffix: '+' },
+  { value: 1000, label: 'Workflow Automations', suffix: '+' },
+  { value: 150, label: 'Happy Clients', suffix: '+' },
+]
+
+export const TRUSTED_BRANDS = [
+  { name: 'Rana', image: '/images/clients/rana.jpg', alt: 'Rana Logo' },
+  { name: 'Yahya', image: '/images/clients/yahya.jpg', alt: 'Yahya Logo' },
+  { name: 'Bulkstream', image: '/images/clients/bulkstream.jpg', alt: 'Bulkstream Logo' },
+  { name: 'Grainbulk', image: '/images/clients/grainbulk.jpg', alt: 'Grainbulk Logo' },
+  { name: 'EPZA', image: '/images/clients/epza.jpg', alt: 'EPZA Logo' },
+  { name: 'Lasty Business', image: '/images/clients/lastybusiness.jpg', alt: 'Lasty Business Logo' },
+]
+
+export const PRODUCTS: Product[] = [
+  {
+    id: 'smarthire',
+    title: 'SmartHire',
+    description: 'AI-powered recruitment automation system that analyzes CVs against job descriptions to find the best fit candidates, reducing recruitment time by 70%.',
+    shortDescription: 'AI-powered recruitment automation system.',
+    category: 'ai-agents',
+    image: '/images/products/smarthire.png',
+    icon: '🎯',
+    techStack: ['React', 'Node.js', 'OpenAI', 'PostgreSQL'],
+    features: [
+      'Automated CV Screening',
+      'Intelligent Candidate Matching',
+      'Interview Scheduling',
+      'Analytics Dashboard',
+    ],
+    status: 'live',
+    demoUrl: 'https://emil-frontend.vercel.app/',
+    impact: {
+      metric: 'Recruitment Time',
+      value: '70%',
+      description: 'Reduction in time-to-hire',
+    },
+  },
+  {
+    id: 'b2b-sales',
+    title: 'B2B Sales Automation',
+    description: 'AI WhatsApp bots for lead follow-ups, order tracking, M-Pesa integration with customer interaction support, increasing sales by 40%.',
+    shortDescription: 'AI WhatsApp bots for sales automation.',
+    category: 'automation',
+    image: '/images/products/b2b-sales.jpg',
+    icon: '🤖',
+    techStack: ['WhatsApp API', 'Node.js', 'M-Pesa API', 'MongoDB'],
+    features: [
+      'Automated Lead Follow-ups',
+      'Order Tracking',
+      'M-Pesa Integration',
+      '24/7 Customer Support',
+    ],
+    status: 'in-development',
+    impact: {
+      metric: 'Sales Increase',
+      value: '40%',
+      description: 'Reported by Ali Cars Nairobi',
+    },
+  },
+  {
+    id: 'cybersec-agent',
+    title: 'Automated CyberSec AI Agent',
+    description: 'AI agent that continuously monitors, analyzes, and automates threat detection and response for proactive cybersecurity.',
+    shortDescription: 'Enterprise cybersecurity automation.',
+    category: 'ai-agents',
+    image: '/images/products/cybersec.jpg',
+    icon: '🛡️',
+    techStack: ['Python', 'TensorFlow', 'React', 'Docker'],
+    features: [
+      'Real-time Threat Detection',
+      'Automated Response',
+      'Intrusion Prevention',
+      'Security Analytics',
+    ],
+    status: 'in-development',
+  },
+  {
+    id: 'mental-health',
+    title: 'AI Mental Health Companion',
+    description: 'Mental health support app providing real-time emotional support through AI avatars and voice agents, with crisis detection capabilities.',
+    shortDescription: 'AI-powered mental health support platform.',
+    category: 'consultancy',
+    image: '/images/products/mental-health.png',
+    icon: '💙',
+    techStack: ['React Native', 'OpenAI', 'Node.js', 'Firebase'],
+    features: [
+      'AI-Powered Chat Support',
+      'Crisis Detection',
+      'Progress Tracking',
+      'Privacy Enhanced',
+    ],
+    status: 'coming-soon',
+  },
+  {
+    id: 'edutech',
+    title: 'EdTech AI Platform',
+    description: 'AI-driven e-learning platform that aggregates high-quality learning content and provides a 360-degree view of student progress.',
+    shortDescription: 'AI-driven personalized learning platform.',
+    category: 'saas',
+    image: '/images/products/edutech.png',
+    icon: '📚',
+    techStack: ['Next.js', 'OpenAI', 'PostgreSQL', 'Stripe'],
+    features: [
+      'AI Avatar Tutor',
+      'Pay As You Learn',
+      'Personalized Learning Paths',
+      'Progress Analytics',
+    ],
+    status: 'in-development',
+  },
+  {
+    id: 'gigaform',
+    title: 'GigaForm - Gig Marketplace',
+    description: 'Gig economy platform with M-Pesa escrow that matches jobs with vetted professionals and releases payment after client approval.',
+    shortDescription: 'Local gig marketplace with escrow.',
+    category: 'saas',
+    image: '/images/products/gigaform.png',
+    icon: '🤝',
+    techStack: ['Next.js', 'M-Pesa API', 'MongoDB', 'React Native'],
+    features: [
+      'M-Pesa Escrow System',
+      'Vetted Professionals',
+      'Job Matching',
+      'Secure Payments',
+    ],
+    status: 'coming-soon',
+  },
+  {
+    id: 'content-platform',
+    title: 'AI Cross-Platform Content Management',
+    description:
+      'Unified platform that enables businesses to create content once and distribute it across multiple social platforms with optimization and analytics.',
+    shortDescription: 'Create once, publish everywhere with AI optimization.',
+    category: 'saas',
+    image: '/images/products/smarthire.svg',
+    icon: '🗞️',
+    techStack: ['Next.js', 'OpenAI', 'PostgreSQL'],
+    features: ['Multi-channel Publishing', 'AI Copy Suggestions', 'Analytics'],
+    status: 'in-development',
+  },
+  {
+    id: 'triage-checker',
+    title: 'AI Healthcare Triage & Symptom Checker',
+    description:
+      'Patients input symptoms and receive triage-level guidance prior to visiting a doctor, improving clinic efficiency and patient outcomes.',
+    shortDescription: 'Symptom checker with AI triage guidance.',
+    category: 'consultancy',
+    image: '/images/products/smarthire.svg',
+    icon: '🩺',
+    techStack: ['React', 'Python', 'TensorFlow'],
+    features: ['Symptom Intake', 'Risk Scoring', 'Care Recommendations'],
+    status: 'in-development',
+  },
+  {
+    id: 'triage-checker',
+    title: 'AI Healthcare Triage & Symptom Checker',
+    description:
+      'Patients input symptoms and receive triage-level guidance prior to visiting a doctor, improving clinic efficiency and patient outcomes.',
+    shortDescription: 'Symptom checker with AI triage guidance.',
+    category: 'consultancy',
+    image: '/images/products/smarthire.svg',
+    icon: '🩺',
+    techStack: ['React', 'Python', 'TensorFlow'],
+    features: ['Symptom Intake', 'Risk Scoring', 'Care Recommendations'],
+    status: 'in-development',
+  },
+  {
+    id: 'supply-chain-optimizer',
+    title: 'AI Supply Chain & Logistics Optimizer',
+    description:
+      'Predict demand, optimize inventory, and plan cost‑effective delivery routes for SMEs using AI forecasting and route optimization.',
+    shortDescription: 'Demand forecasting and route optimization for SMEs.',
+    category: 'automation',
+    image: '/images/products/smarthire.svg',
+    icon: '🚚',
+    techStack: ['Next.js', 'Python', 'Maps API'],
+    features: ['Demand Forecasting', 'Inventory Planning', 'Route Optimization'],
+    status: 'in-development',
+  },
+  {
+    id: 'multiagent-platform',
+    title: 'SaaS Multiagent Platform for Kenyan SMEs',
+    description:
+      'WhatsApp/social multi-agent platform that enables small businesses to manage tasks, customers, and employees effectively.',
+    shortDescription: 'Multi-agent platform for tasks and customer ops.',
+    category: 'saas',
+    image: '/images/products/smarthire.svg',
+    icon: '👥',
+    techStack: ['Node.js', 'WhatsApp API', 'MongoDB'],
+    features: ['Task Bots', 'Customer Support', 'Staff Workflows'],
+    status: 'in-development',
+  },
+  {
+    id: 'content-ads',
+    title: 'Content Management with Targeted Ads',
+    description:
+      'Niche platform that curates SEO content and integrates targeted ads for passive income generation.',
+    shortDescription: 'SEO content engine with ad monetization.',
+    category: 'saas',
+    image: '/images/products/smarthire.svg',
+    icon: '🎯',
+    techStack: ['Next.js', 'OpenAI', 'Stripe'],
+    features: ['SEO Generation', 'Ad Targeting', 'Analytics'],
+    status: 'in-development',
+  },
+]
+
+export const TESTIMONIALS: Testimonial[] = [
+  {
+    id: '1',
+    name: 'John Hill',
+    company: 'Ali Cars Nairobi',
+    role: 'Owner',
+    image: '/images/testimonials/john.jpg',
+    quote: 'The WhatsApp bot StriveGo created for our car store has increased our sales by 40%. I love it when my customers are able to order, pay via M-Pesa and be tracked. Amazing!',
+    rating: 5,
+    project: 'B2B Sales Automation',
+  },
+  {
+    id: '2',
+    name: 'Mary Achieng',
+    company: 'Tech Academy',
+    role: 'Director',
+    image: '/images/testimonials/mary.png',
+    quote: 'The learning platform StriveGo developed for us has made it so easy to deliver content to our students. Enrollment has doubled since we launched the new platform.',
+    rating: 5,
+    project: 'EdTech Platform',
+  },
+  {
+    id: '3',
+    name: 'Paul Otieno',
+    company: 'Logistics Company',
+    role: 'Operations Manager',
+    image: '/images/testimonials/paul.png',
+    quote: 'The data visualization dashboards have transformed how we make decisions. We can now see patterns and opportunities we were completely missing before.',
+    rating: 4.5,
+    project: 'Data Visualization',
+  },
+]
+
+export const TEAM: TeamMember[] = [
+  {
+    id: '1',
+    name: 'Nelson Frank',
+    role: 'Junior Software Engineer',
+    bio: 'Expert in React, Java, PostgreSQL, Mobile App, and AI integrations with 3+ years of experience. Committed to ensuring growth by saving time and cutting down costs.',
+    image: '/images/team/nelson-frank.jpg',
+    social: {
+      linkedin: 'https://www.linkedin.com/in/nelson-w-a557272b4/',
+      twitter: 'https://x.com/OchiengNe88651/',
+      github: 'https://github.com/NelsonFranklinWere',
+    },
+  },
+  {
+    id: '2',
+    name: 'Laura Nyaaga',
+    role: 'Software Developer',
+    bio: "I'm a passionate Software Developer with expertise in building User-focused Web and Mobile Applications. I'm driven by innovation and committed to creating technology that solves real-world problems.",
+    image: '/images/team/laura-nyaaga.jpg',
+    social: {
+      linkedin: 'https://www.linkedin.com/in/laura-nyaaga-434b8b307',
+      twitter: 'https://x.com/LNyaaga57058',
+      github: 'https://github.com/Laura-Nyaaga',
+    },
+  },
+  {
+    id: '3',
+    name: 'Fidel Ochieng',
+    role: 'Lead Web Designer',
+    bio: 'Specializes in Web design using CMS tools like WordPress, driving solutions to Businesses.',
+    image: '/images/team/fidel-ochieng.jpg',
+    social: {
+      twitter: 'https://x.com/data-world-254',
+      github: 'https://github.com/data-world-254',
+    },
+  },
+  {
+    id: '4',
+    name: 'Caleb Kiptoo',
+    role: 'Lead Developer',
+    bio: 'Python backend engineer with 2+ years of experience in REST API development and cloud automation. Designing scalable systems and integrating AI/ML capabilities into applications.',
+    image: '/images/team/caleb-kiptoo.jpg',
+    social: {
+      linkedin: 'https://www.linkedin.com/in/kiptoo-caleb-aa1865204',
+      twitter: 'https://x.com/kiptooc0des',
+      github: 'https://github.com/kiptoobarchok/',
+    },
+  },
+]
+
+export const SERVICE_TYPES = [
+  'Website Development',
+  'Mobile App Development',
+  'AI Automation',
+  'Digital Marketing',
+  'Data Visualization',
+  'AI Consulting',
+  'Other',
+]
+

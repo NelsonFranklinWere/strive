@@ -1,0 +1,61 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /test/
+Crawl-delay: 1
+
+# Sitemap reference (main sitemap)
+Sitemap: https://strivego.online/sitemap.xml
+
+# Targeted optimization for main bots
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Googlebot-Image
+Allow: /images/
+Disallow: /private/
+Crawl-delay: 1
+
+User-agent: Googlebot-Mobile
+Allow: /
+Crawl-delay: 1
+
+# Smart SEO Indexing Rules
+User-agent: *
+Allow: /$
+Allow: /index.html$
+Allow: /portfolio.html$
+Allow: /collection.html$
+Allow: /contact.html$
+Allow: /blog.html$
+Disallow: /drafts/
+Disallow: /temp/
+
+# Block AI training bots and data scrapers
+User-agent: GPTBot
+Disallow: /
+User-agent: ChatGPT-User
+Disallow: /
+User-agent: CCBot
+Disallow: /
+User-agent: OAI-SearchBot
+Disallow: /
+User-agent: ClaudeBot
+Disallow: /
+
+# Respectful crawlers allowed
+User-agent: DuckDuckBot
+Allow: /
+User-agent: Applebot
+Allow: /
+
+# Short summary for humans
+# 🚀 StriveGo Robots File — Optimized for Google, Bing & Local SEO
+# Location: Nairobi, Kenya | Focus: AI, Apps, Websites, Automation
