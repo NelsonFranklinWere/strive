@@ -27,13 +27,13 @@ export default function CTASection() {
             <span className="text-quantum-cyan">African tech innovation</span>
           </h2>
           <p className="text-xl md:text-2xl text-gray-200 mb-10">
-            Let's build together and transform your business with intelligent automation
+            Let&apos;s build together and transform your business with intelligent automation
           </p>
           <Link
             href="/contact"
             className="inline-flex items-center space-x-2 bg-quantum-cyan text-white px-10 py-5 rounded-full font-semibold text-lg hover:bg-opacity-90 transition-all btn-hover-glow"
           >
-            <span>Let's Build Together</span>
+            <span>Let&apos;s Build Together</span>
             <ArrowRight className="w-6 h-6" />
           </Link>
         </motion.div>

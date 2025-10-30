@@ -68,7 +68,7 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
             >
-              Transform your business with AI-powered automation, intelligent systems, and cutting-edge technology solutions built for Africa\'s growing market.
+              Transform your business with AI-powered automation, intelligent systems, and cutting-edge technology solutions built for Africa&apos;s growing market.
             </motion.p>
 
             <motion.div

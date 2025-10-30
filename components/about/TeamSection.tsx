@@ -21,7 +21,7 @@ export default function TeamSection() {
             Meet The <span className="gradient-text">Team</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            The passionate individuals driving StriveGo's vision forward
+            The passionate individuals driving StriveGo&apos;s vision forward
           </p>
         </motion.div>
 

@@ -21,10 +21,10 @@ export default function ContactHero() {
             <MessageCircle className="w-10 h-10 text-white" />
           </div>
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
-            Let's Bring Your <span className="text-quantum-cyan">Vision</span> to Life
+            Let&apos;s Bring Your <span className="text-quantum-cyan">Vision</span> to Life
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 leading-relaxed">
-            Connect with StriveGo today. We're here to help transform your business with intelligent automation.
+            Connect with StriveGo today. We&apos;re here to help transform your business with intelligent automation.
           </p>
         </motion.div>
       </div>

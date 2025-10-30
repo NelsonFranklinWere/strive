@@ -22,7 +22,7 @@ export default function Testimonials() {
             What Our <span className="gradient-text">Clients Say</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Success stories from businesses we\'ve worked with
+            Success stories from businesses we&apos;ve worked with
           </p>
         </motion.div>
 
