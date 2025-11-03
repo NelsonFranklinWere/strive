@@ -9,11 +9,13 @@ import { ThemeProvider } from '@/components/ThemeProvider'
 import SEOJsonLd from '@/components/SEOJsonLd'
 import WhatsAppFloating from '@/components/WhatsAppFloating'
 
+// Font loading with fallbacks - if network fails, use system fonts
 const poppins = Poppins({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700'],
   variable: '--font-poppins',
   display: 'swap',
+  fallback: ['system-ui', 'arial'],
 })
 
 const spaceGrotesk = Space_Grotesk({
@@ -21,6 +23,7 @@ const spaceGrotesk = Space_Grotesk({
   weight: ['400', '500', '600', '700'],
   variable: '--font-space-grotesk',
   display: 'swap',
+  fallback: ['system-ui', 'arial'],
 })
 
 export const metadata: Metadata = {

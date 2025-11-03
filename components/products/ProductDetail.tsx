@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowLeft, ExternalLink, Check } from 'lucide-react'
-import { type Product } from '@/lib/constants'
+import { type Product } from '@/lib/types'
 import SEOJsonLd from '@/components/SEOJsonLd'
 
 export default function ProductDetail({ product }: { product: Product }) {

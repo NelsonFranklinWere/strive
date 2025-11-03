@@ -3,6 +3,14 @@
 import { useEffect, useRef } from 'react'
 import { usePathname } from 'next/navigation'
 
+// Extend Window interface for Google Analytics
+declare global {
+  interface Window {
+    dataLayer: any[]
+    gtag?: (...args: any[]) => void
+  }
+}
+
 function setCookie(name: string, value: string, days = 365) {
   const d = new Date()
   d.setTime(d.getTime() + days * 24 * 60 * 60 * 1000)
@@ -39,17 +47,19 @@ export default function Analytics() {
     document.head.appendChild(script1)
 
     // Initialize gtag
-    window.dataLayer = window.dataLayer || []
-    function gtag(...args: any[]) {
-      window.dataLayer.push(args)
+    if (typeof window !== 'undefined') {
+      window.dataLayer = window.dataLayer || []
+      const gtag = (...args: any[]) => {
+        window.dataLayer.push(args)
+      }
+      window.gtag = gtag
+      
+      gtag('js', new Date())
+      gtag('config', GA_MEASUREMENT_ID, {
+        page_path: pathname,
+        user_id: sgid,
+      })
     }
-    ;(window as any).gtag = gtag
-
-    gtag('js', new Date())
-    gtag('config', GA_MEASUREMENT_ID, {
-      page_path: pathname,
-      user_id: sgid,
-    })
 
     return () => {
       document.head.removeChild(script1)

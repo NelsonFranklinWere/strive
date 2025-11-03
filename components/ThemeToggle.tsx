@@ -5,10 +5,10 @@ import { motion } from 'framer-motion'
 import { useTheme } from './ThemeProvider'
 
 export default function ThemeToggle() {
-  try {
-    const { theme, toggleTheme } = useTheme()
+  // Hook must be called unconditionally at top level
+  const { theme, toggleTheme } = useTheme()
 
-    return (
+  return (
     <motion.button
       onClick={toggleTheme}
       className="relative w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center hover:bg-white/20 transition-all"
@@ -28,10 +28,6 @@ export default function ThemeToggle() {
         )}
       </motion.div>
     </motion.button>
-    )
-  } catch (error) {
-    // ThemeProvider not available - return null silently
-    return null
-  }
+  )
 }
 

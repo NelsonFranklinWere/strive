@@ -47,7 +47,7 @@ export default function MissionVision() {
             className="bg-gradient-to-br from-royal-purple/10 to-quantum-cyan/10 rounded-2xl p-8 glass order-2 md:order-1"
           >
             <p className="text-gray-700 text-lg leading-relaxed">
-              At {COMPANY_INFO.name}, our mission goes beyond technology it's about empowering people. By combining AI innovation with Kenyan resilience and creativity, we aim to transform small businesses into competitive enterprises.
+              At {COMPANY_INFO.name}, our mission goes beyond technology it&apos;s about empowering people. By combining AI innovation with Kenyan resilience and creativity, we aim to transform small businesses into competitive enterprises.
             </p>
           </motion.div>
           <motion.div

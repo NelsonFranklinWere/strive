@@ -21,7 +21,7 @@ export default function AboutHero() {
             About <span className="text-quantum-cyan">StriveGo</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 leading-relaxed">
-            {COMPANY_INFO.name} is not just a tech company — it's a movement of creators, coders, and dreamers.
+            {COMPANY_INFO.name} is not just a tech company — it&apos;s a movement of creators, coders, and dreamers.
           </p>
         </motion.div>
       </div>
