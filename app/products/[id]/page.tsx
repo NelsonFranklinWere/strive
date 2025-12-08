@@ -23,10 +23,25 @@ export async function generateMetadata({
   }
 
   return {
-    title: product.title,
-    description: product.shortDescription,
+    title: `${product.title} | AI Automation Tool by Top Tech Company Nairobi | StriveGo`,
+    description: `${product.shortDescription} Built by StriveGo, one of the top tech companies in Nairobi. ${product.description}`,
+    keywords: [
+      product.title.toLowerCase(),
+      'AI automation nairobi',
+      'SaaS tool nairobi',
+      'business automation kenya',
+      'top tech company nairobi',
+      product.category,
+    ],
     openGraph: {
-      title: product.title,
+      title: `${product.title} | AI Automation Tool by Top Tech Company Nairobi | StriveGo`,
+      description: `${product.shortDescription} Built by StriveGo, one of the top tech companies in Nairobi.`,
+      images: product.image ? [{ url: product.image, width: 1200, height: 630, alt: `${product.title} - StriveGo` }] : [],
+      url: `https://strivego.online/products/${product.id}`,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${product.title} | Top Tech Company Nairobi`,
       description: product.shortDescription,
       images: product.image ? [product.image] : [],
     },

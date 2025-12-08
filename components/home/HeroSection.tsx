@@ -63,12 +63,20 @@ export default function HeroSection() {
               {COMPANY_INFO.tagline}
             </motion.h1>
             <motion.p
-              className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto"
+              className="text-xl md:text-2xl text-gray-200 mb-4 max-w-3xl mx-auto"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
             >
-              Transform your business with AI-powered automation, intelligent systems, and cutting-edge technology solutions built for Africa&apos;s growing market.
+              At StriveGo we <strong className="text-white">innovate with purpose</strong>, <strong className="text-white">empower with integrity</strong>, and <strong className="text-white">transform with impact</strong>.
+            </motion.p>
+            <motion.p
+              className="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5, duration: 0.8 }}
+            >
+              One of the top 5 tech companies in Nairobi, building AI automation tools and SaaS platforms that help businesses focus on growth by automating valuable workflows.
             </motion.p>
 
             <motion.div

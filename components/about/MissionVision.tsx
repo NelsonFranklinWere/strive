@@ -20,8 +20,11 @@ export default function MissionVision() {
               <Target className="w-8 h-8 text-white" />
             </div>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Mission</h2>
-            <p className="text-xl text-gray-600 leading-relaxed">
+            <p className="text-xl text-gray-600 leading-relaxed mb-4">
               {COMPANY_INFO.mission}
+            </p>
+            <p className="text-lg text-gray-500 italic">
+              {COMPANY_INFO.dna.impact}
             </p>
           </motion.div>
           <motion.div

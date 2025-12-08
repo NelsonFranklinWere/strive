@@ -8,21 +8,41 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
         disallow: ['/api/', '/admin/', '/private/'],
       },
+      // Allow AI crawlers for better visibility in ChatGPT, Gemini, Edge, Brave Search
       {
         userAgent: 'GPTBot',
-        disallow: '/',
+        allow: '/',
+        disallow: ['/api/', '/admin/', '/private/'],
       },
       {
         userAgent: 'ChatGPT-User',
-        disallow: '/',
+        allow: '/',
+        disallow: ['/api/', '/admin/', '/private/'],
       },
       {
         userAgent: 'CCBot',
-        disallow: '/',
+        allow: '/',
+        disallow: ['/api/', '/admin/', '/private/'],
       },
       {
         userAgent: 'ClaudeBot',
-        disallow: '/',
+        allow: '/',
+        disallow: ['/api/', '/admin/', '/private/'],
+      },
+      {
+        userAgent: 'Google-Extended',
+        allow: '/',
+        disallow: ['/api/', '/admin/', '/private/'],
+      },
+      {
+        userAgent: 'anthropic-ai',
+        allow: '/',
+        disallow: ['/api/', '/admin/', '/private/'],
+      },
+      {
+        userAgent: 'PerplexityBot',
+        allow: '/',
+        disallow: ['/api/', '/admin/', '/private/'],
       },
     ],
     sitemap: 'https://strivego.online/sitemap.xml',

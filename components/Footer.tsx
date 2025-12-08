@@ -47,8 +47,11 @@ export default function Footer() {
                 <span className="text-white">Go</span>
               </span>
             </Link>
-            <p className="text-gray-300 text-sm">
+            <p className="text-gray-300 text-sm mb-2">
               {COMPANY_INFO.tagline}
+            </p>
+            <p className="text-gray-400 text-xs italic">
+              {COMPANY_INFO.mission}
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social) => {

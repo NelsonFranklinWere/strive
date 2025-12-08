@@ -7,16 +7,30 @@ import Testimonials from '@/components/about/Testimonials'
 import { COMPANY_INFO } from '@/lib/constants'
 
 export const metadata: Metadata = {
-  title: "About StriveGo | Nairobi’s Leading AI Automation & SaaS Startup",
+  title: "About StriveGo | Top Tech Company in Nairobi | Our Mission & Team",
   description:
-    'Learn about StriveGo’s mission to automate African businesses through AI and technology. Discover our vision, values, and the innovators behind our impact.',
+    'Learn about StriveGo, one of the top 5 tech companies in Nairobi. Discover our mission to help businesses focus on growth through AI automation and SaaS development. Meet the team driving innovation in Kenya.',
+  keywords: [
+    'top tech company nairobi',
+    'about strivego',
+    'tech company nairobi team',
+    'AI automation company nairobi',
+    'SaaS development nairobi',
+    'business automation kenya',
+  ],
   alternates: { canonical: '/about' },
   openGraph: {
-    title: "About StriveGo | Nairobi’s Leading AI Automation & SaaS Startup",
+    title: "About StriveGo | Top Tech Company in Nairobi | Our Mission & Team",
     description:
-      'Learn about StriveGo’s mission to automate African businesses through AI and technology. Discover our vision, values, and the innovators behind our impact.',
+      'Learn about StriveGo, one of the top 5 tech companies in Nairobi. Discover our mission to help businesses focus on growth through AI automation and SaaS development.',
     url: 'https://strivego.online/about',
-    images: [{ url: '/images/logo/logo.jpeg', width: 1200, height: 630 }],
+    images: [{ url: '/images/logo/logo.jpeg', width: 1200, height: 630, alt: 'StriveGo Team - Top Tech Company Nairobi' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "About StriveGo | Top Tech Company in Nairobi",
+    description: 'Learn about StriveGo, one of the top 5 tech companies in Nairobi. Discover our mission and team.',
+    images: ['/images/logo/logo.jpeg'],
   },
 }
 

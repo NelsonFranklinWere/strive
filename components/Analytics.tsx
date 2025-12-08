@@ -58,6 +58,25 @@ export default function Analytics() {
       gtag('config', GA_MEASUREMENT_ID, {
         page_path: pathname,
         user_id: sgid,
+        send_page_view: true,
+        anonymize_ip: true,
+        cookie_flags: 'SameSite=None;Secure',
+        // Enhanced measurement
+        allow_google_signals: true,
+        allow_ad_personalization_signals: true,
+        // Custom dimensions
+        custom_map: {
+          dimension1: 'user_type',
+          dimension2: 'engagement_level',
+        },
+      })
+      
+      // Set user properties
+      gtag('set', {
+        user_properties: {
+          user_type: 'visitor',
+          location: 'Nairobi, Kenya',
+        },
       })
     }
 
@@ -66,14 +85,36 @@ export default function Analytics() {
     }
   }, [pathname, GA_MEASUREMENT_ID])
 
-  // Track page views on route change
+  // Track page views on route change with enhanced data
   useEffect(() => {
     if (typeof window !== 'undefined' && (window as any).gtag) {
       startedAtRef.current = Date.now()
+      const pageTitle = document.title
+      const pageDescription = document.querySelector('meta[name="description"]')?.getAttribute('content') || ''
+      
       ;(window as any).gtag('event', 'page_view', {
         page_path: pathname,
-        page_title: document.title,
+        page_title: pageTitle,
+        page_location: window.location.href,
+        page_referrer: document.referrer || 'direct',
+        content_group1: pathname.split('/')[1] || 'home',
+        content_group2: pathname,
       })
+      
+      // Track page load performance
+      if ('performance' in window && 'timing' in window.performance) {
+        const perfData = window.performance.timing
+        const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart
+        const domContentLoaded = perfData.domContentLoadedEventEnd - perfData.navigationStart
+        
+        if ((window as any).gtag && pageLoadTime > 0) {
+          ;(window as any).gtag('event', 'page_load_time', {
+            page_path: pathname,
+            load_time: pageLoadTime,
+            dom_content_loaded: domContentLoaded,
+          })
+        }
+      }
     }
   }, [pathname])
 
@@ -118,20 +159,180 @@ export default function Analytics() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [pathname])
 
-  // Time on page heartbeat (every 30s)
+  // Time on page heartbeat (every 30s) with detailed tracking
   useEffect(() => {
     const interval = setInterval(() => {
       if (!(window as any).gtag) return
       const started = startedAtRef.current || Date.now()
       const elapsed = Math.round((Date.now() - started) / 1000)
+      
+      // Calculate engagement score (0-100)
+      const timeScore = Math.min(10, Math.floor(elapsed / 6)) // Max 10 points for time
+      const scrollScore = Math.min(5, Math.floor(maxScrollRef.current / 20)) // Max 5 points for scroll
+      const clickScore = Math.min(5, Math.floor(clickCountRef.current / 2)) // Max 5 points for clicks
+      const engagementScore = timeScore + scrollScore + clickScore
+      
       ;(window as any).gtag('event', 'engagement_heartbeat', {
         seconds_elapsed: elapsed,
         max_scroll: maxScrollRef.current,
         clicks: clickCountRef.current,
+        engagement_score: engagementScore,
         page_path: pathname,
+        page_title: document.title,
       })
     }, 30000)
     return () => clearInterval(interval)
+  }, [pathname])
+
+  // Track time on page when user leaves
+  useEffect(() => {
+    const handleBeforeUnload = () => {
+      if (!(window as any).gtag) return
+      const started = startedAtRef.current || Date.now()
+      const timeOnPage = Math.round((Date.now() - started) / 1000)
+      
+      ;(window as any).gtag('event', 'page_exit', {
+        time_on_page: timeOnPage,
+        max_scroll: maxScrollRef.current,
+        total_clicks: clickCountRef.current,
+        page_path: pathname,
+      })
+    }
+    
+    window.addEventListener('beforeunload', handleBeforeUnload)
+    return () => window.removeEventListener('beforeunload', handleBeforeUnload)
+  }, [pathname])
+
+  // Track page visibility (tab switching)
+  useEffect(() => {
+    let hiddenTime = 0
+    let visibilityStart = Date.now()
+    
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        hiddenTime = Date.now()
+      } else {
+        const timeHidden = hiddenTime ? Math.round((Date.now() - hiddenTime) / 1000) : 0
+        if ((window as any).gtag && timeHidden > 0) {
+          ;(window as any).gtag('event', 'page_visible', {
+            time_hidden: timeHidden,
+            page_path: pathname,
+          })
+        }
+        visibilityStart = Date.now()
+      }
+    }
+    
+    document.addEventListener('visibilitychange', handleVisibilityChange)
+    return () => document.removeEventListener('visibilitychange', handleVisibilityChange)
+  }, [pathname])
+
+  // Track form interactions
+  useEffect(() => {
+    const handleFocus = (e: FocusEvent) => {
+      const target = e.target as HTMLElement
+      if (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.tagName === 'SELECT') {
+        if ((window as any).gtag) {
+          ;(window as any).gtag('event', 'form_interaction', {
+            form_field: target.tagName.toLowerCase(),
+            form_id: (target as HTMLInputElement).id || 'unknown',
+            page_path: pathname,
+          })
+        }
+      }
+    }
+    
+    document.addEventListener('focus', handleFocus, true)
+    return () => document.removeEventListener('focus', handleFocus, true)
+  }, [pathname])
+
+  // Track CTA button clicks specifically with enhanced tracking
+  useEffect(() => {
+    const handleClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement
+      const link = target.closest('a')
+      const button = target.closest('button')
+      
+      // Track all important links
+      if (link && (window as any).gtag) {
+        const href = link.getAttribute('href') || ''
+        const linkText = link.textContent?.trim() || ''
+        
+        // Track internal vs external links
+        if (href.startsWith('/')) {
+          ;(window as any).gtag('event', 'internal_link_click', {
+            link_url: href,
+            link_text: linkText,
+            page_path: pathname,
+          })
+        } else if (href.startsWith('http')) {
+          ;(window as any).gtag('event', 'external_link_click', {
+            link_url: href,
+            link_text: linkText,
+            page_path: pathname,
+          })
+        }
+        
+        // Track CTA specifically
+        if (href.includes('/products') || href.includes('/contact') || linkText.toLowerCase().includes('get started') || linkText.toLowerCase().includes('contact')) {
+          ;(window as any).gtag('event', 'cta_click', {
+            cta_text: linkText,
+            cta_location: pathname,
+            cta_url: href,
+            page_path: pathname,
+          })
+        }
+      }
+      
+      // Track button clicks
+      if (button && (window as any).gtag) {
+        const buttonText = button.textContent?.trim() || ''
+        if (buttonText) {
+          ;(window as any).gtag('event', 'button_click', {
+            button_text: buttonText,
+            button_id: button.id || 'unknown',
+            page_path: pathname,
+          })
+        }
+      }
+    }
+    
+    document.addEventListener('click', handleClick, true)
+    return () => document.removeEventListener('click', handleClick, true)
+  }, [pathname])
+  
+  // Track video interactions
+  useEffect(() => {
+    const videos = document.querySelectorAll('video')
+    videos.forEach((video) => {
+      const handlePlay = () => {
+        if ((window as any).gtag) {
+          ;(window as any).gtag('event', 'video_play', {
+            video_title: video.getAttribute('title') || 'unknown',
+            video_url: video.currentSrc || 'unknown',
+            page_path: pathname,
+          })
+        }
+      }
+      
+      const handlePause = () => {
+        if ((window as any).gtag) {
+          ;(window as any).gtag('event', 'video_pause', {
+            video_title: video.getAttribute('title') || 'unknown',
+            video_url: video.currentSrc || 'unknown',
+            page_path: pathname,
+          })
+        }
+      }
+      
+      video.addEventListener('play', handlePlay)
+      video.addEventListener('pause', handlePause)
+      
+      return () => {
+        video.removeEventListener('play', handlePlay)
+        video.removeEventListener('pause', handlePause)
+      }
+    })
   }, [pathname])
 
   return null

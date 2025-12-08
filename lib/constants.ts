@@ -3,8 +3,29 @@ import { Product, Testimonial, TeamMember } from './types'
 export const COMPANY_INFO = {
   name: 'StriveGo',
   tagline: "Empowering Startups. Automating Growth. Building Africa's Digital Future.",
-  mission: 'To bridge African entrepreneurship and global technology through AI, automation, and human-centered innovation.',
+  mission: 'At StriveGo we innovate with purpose, empower with integrity, and transform with impact.',
   vision: "To become Africa's leading innovation hub, powering 1,000+ startups with intelligent systems by 2030.",
+  dna: {
+    statement: 'At StriveGo we innovate with purpose, empower with integrity, and transform with impact.',
+    pillars: [
+      {
+        name: 'Innovate',
+        description: 'Represents our minds and capabilities to create new solutions',
+        meaning: 'represents the companies minds and capabilities to create new solutions',
+      },
+      {
+        name: 'Empower',
+        description: 'Represents our hearts, giving people and teams tools to rise',
+        meaning: 'represents our hearts, giving people and teams tools to rise',
+      },
+      {
+        name: 'Transform',
+        description: 'Represents our soul, changing lives, industries and Africa itself',
+        meaning: 'represents our soul, changing lives, industries and africa itself',
+      },
+    ],
+    impact: 'The three pillars define our culture, guide our products, and shape our legacy.',
+  },
   phone: '+254 743 869 564',
   email: 'info@strivego.online',
   address: 'Nairobi CBD, Kenya',
@@ -25,29 +46,25 @@ export const COMPANY_INFO = {
 
 export const CORE_VALUES = [
   {
-    icon: '💡',
-    title: 'Innovation',
-    description: 'We embrace cutting-edge technology and creative solutions.',
+    icon: '🧠',
+    title: 'Innovate',
+    subtitle: 'Our Minds',
+    description: 'Represents our minds and capabilities to create new solutions',
+    fullDescription: 'Innovate represents the companies minds and capabilities to create new solutions',
   },
   {
-    icon: '🤝',
-    title: 'Integrity',
-    description: 'We build trust through transparency and ethical practices.',
+    icon: '❤️',
+    title: 'Empower',
+    subtitle: 'Our Hearts',
+    description: 'Represents our hearts, giving people and teams tools to rise',
+    fullDescription: 'Empower represents our hearts, giving people and teams tools to rise',
   },
   {
-    icon: '🌟',
-    title: 'Excellence',
-    description: 'We strive for perfection in every project we deliver.',
-  },
-  {
-    icon: '👥',
-    title: 'Collaboration',
-    description: 'We believe in the power of teamwork and partnership.',
-  },
-  {
-    icon: '🚀',
-    title: 'Growth Mindset',
-    description: 'We continuously learn and adapt to exceed expectations.',
+    icon: '✨',
+    title: 'Transform',
+    subtitle: 'Our Soul',
+    description: 'Represents our soul, changing lives, industries and Africa itself',
+    fullDescription: 'Transform represents our soul, changing lives, industries and africa itself',
   },
 ]
 
