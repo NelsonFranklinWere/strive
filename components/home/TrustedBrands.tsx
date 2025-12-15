@@ -37,6 +37,7 @@ export default function TrustedBrands() {
                   width={150}
                   height={80}
                   className="object-contain max-h-16 w-auto grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100"
+                  unoptimized={true}
                 />
               </div>
             ))}

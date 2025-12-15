@@ -47,6 +47,7 @@ export default function FeaturedSolutions() {
                         fill
                         className="object-cover group-hover:scale-110 transition-transform duration-500"
                         sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 33vw"
+                        unoptimized={true}
                       />
                     )}
                     <div className="absolute top-1.5 right-1.5 sm:top-3 sm:right-3">

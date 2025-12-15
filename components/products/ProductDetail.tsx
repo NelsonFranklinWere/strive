@@ -50,6 +50,7 @@ export default function ProductDetail({ product }: { product: Product }) {
                 alt={product.title}
                 fill
                 className="object-cover"
+                unoptimized={true}
               />
             )}
           </motion.div>
