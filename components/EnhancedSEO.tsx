@@ -83,7 +83,7 @@ export default function EnhancedSEO({
       <meta name="address" content={COMPANY_INFO.address} />
       
       {/* Keywords */}
-      <meta name="keywords" content="top 5 tech companies in nairobi, top 10 companies in nairobi, best tech company nairobi, AI automation nairobi, SaaS development nairobi, business automation tools, software development nairobi" />
+      <meta name="keywords" content="top 5 tech companies in nairobi, top 10 companies in nairobi, best tech company nairobi, AI automation nairobi, SaaS development nairobi, business automation tools, software development nairobi, software development services nairobi, custom software development nairobi, software developers nairobi, server maintenance nairobi, server maintenance services nairobi, server management nairobi, IT support nairobi, server maintenance help nairobi, help with software development nairobi, software development company nairobi, server maintenance company nairobi" />
       
       {/* Canonical URL */}
       <link rel="canonical" href={url} />

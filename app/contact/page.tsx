@@ -7,21 +7,26 @@ import SEOJsonLd from '@/components/SEOJsonLd'
 import { COMPANY_INFO } from '@/lib/constants'
 
 export const metadata: Metadata = {
-  title: 'Contact StriveGo | Top Tech Company Nairobi | Let\'s Build Your AI Automation Project',
+  title: 'Contact StriveGo | Top Tech Company Nairobi | Software Development & Server Maintenance Services',
   description:
-    'Get in touch with StriveGo, one of the top 5 tech companies in Nairobi. Contact us to discuss your AI automation, SaaS development, or business growth project. Located in Nairobi CBD, Kenya.',
+    'Get in touch with StriveGo, one of the top 5 tech companies in Nairobi. Contact us for software development services, server maintenance, IT support, AI automation, SaaS development, or business growth projects. Located in Nairobi CBD, Kenya.',
   keywords: [
     'contact strivego nairobi',
     'tech company contact nairobi',
     'AI automation consultation',
     'SaaS development nairobi',
     'business automation consultation',
+    'software development contact nairobi',
+    'server maintenance contact nairobi',
+    'IT support contact nairobi',
+    'hire software developers nairobi',
+    'server maintenance help nairobi',
   ],
   alternates: { canonical: '/contact' },
   openGraph: {
     title: 'Contact StriveGo | Top Tech Company Nairobi | Let\'s Build Your AI Automation Project',
     description:
-      'Get in touch with StriveGo, one of the top 5 tech companies in Nairobi. Contact us to discuss your AI automation or SaaS development project.',
+      'Get in touch with StriveGo, one of the top 5 tech companies in Nairobi. Contact us for software development services, server maintenance, IT support, AI automation, or SaaS development projects.',
     url: 'https://strivego.online/contact',
     images: [{ url: '/images/logo/logo.jpeg', width: 1200, height: 630, alt: 'Contact StriveGo - Top Tech Company Nairobi' }],
   },

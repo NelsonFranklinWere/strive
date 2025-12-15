@@ -7,7 +7,6 @@ import Footer from '@/components/Footer'
 import Analytics from '@/components/Analytics'
 import { ThemeProvider } from '@/components/ThemeProvider'
 import SEOJsonLd from '@/components/SEOJsonLd'
-import WhatsAppFloating from '@/components/WhatsAppFloating'
 
 // Font loading with fallbacks - if network fails, use system fonts
 const poppins = Poppins({
@@ -31,7 +30,7 @@ export const metadata: Metadata = {
     default: 'StriveGo | Top Tech Company in Nairobi | AI Automation & SaaS Development',
     template: `%s | StriveGo - Leading Tech Company Nairobi`,
   },
-  description: 'StriveGo is one of the top 5 tech companies in Nairobi, Kenya. We build AI automation tools, SaaS platforms, and business growth systems that help companies focus on valuable work. Leading software development and AI innovation in Nairobi.',
+  description: 'StriveGo is one of the top 5 tech companies in Nairobi, Kenya. We provide comprehensive software development services, server maintenance, IT support, and business automation solutions. Expert software developers and server maintenance specialists serving Nairobi businesses. Leading AI automation, SaaS development, and infrastructure management in Kenya.',
   keywords: [
     // Top company rankings
     'top 5 tech companies in nairobi',
@@ -51,6 +50,45 @@ export const metadata: Metadata = {
     'AI tools for business growth',
     'software development nairobi',
     'tech company nairobi kenya',
+    // Software Development Services - Nairobi
+    'software development services nairobi',
+    'custom software development nairobi',
+    'software developers nairobi',
+    'hire software developers nairobi',
+    'software development company nairobi',
+    'best software developers nairobi',
+    'professional software development nairobi',
+    'software solutions nairobi',
+    'web development services nairobi',
+    'mobile app development nairobi',
+    'software consulting nairobi',
+    'enterprise software development nairobi',
+    'software development agency nairobi',
+    // Server Maintenance Services - Nairobi
+    'server maintenance nairobi',
+    'server maintenance services nairobi',
+    'server management nairobi',
+    'IT server support nairobi',
+    'server maintenance company nairobi',
+    'server maintenance help nairobi',
+    'server administration nairobi',
+    'server maintenance experts nairobi',
+    'server monitoring nairobi',
+    'server support nairobi',
+    'dedicated server maintenance nairobi',
+    'cloud server maintenance nairobi',
+    'server maintenance consultants nairobi',
+    'server infrastructure management nairobi',
+    // IT Support & Maintenance
+    'IT support nairobi',
+    'IT maintenance nairobi',
+    'IT services nairobi',
+    'technical support nairobi',
+    'IT help desk nairobi',
+    'IT infrastructure management nairobi',
+    'system administration nairobi',
+    'network maintenance nairobi',
+    'IT maintenance services nairobi',
     // Specific services
     'AI Kenya',
     'software developers Kenya',
@@ -73,6 +111,15 @@ export const metadata: Metadata = {
     'enterprise software nairobi',
     'cloud solutions kenya',
     'AI solutions africa',
+    // Help & Support Keywords
+    'help with software development nairobi',
+    'software development help nairobi',
+    'server maintenance help nairobi',
+    'need software developer nairobi',
+    'find software developer nairobi',
+    'need server maintenance nairobi',
+    'server maintenance company near me',
+    'software development company near me',
   ],
   authors: [{ name: COMPANY_INFO.name }],
   creator: COMPANY_INFO.name,
@@ -91,7 +138,7 @@ export const metadata: Metadata = {
     url: 'https://strivego.online',
     siteName: 'StriveGo - Top Tech Company Nairobi',
     title: 'StriveGo | Top 5 Tech Companies in Nairobi | AI Automation & SaaS Development',
-    description: 'StriveGo ranks among the top 5 tech companies in Nairobi. We build AI automation tools and SaaS platforms that help businesses focus on growth. Leading software development and innovation in Kenya.',
+    description: 'StriveGo ranks among the top 5 tech companies in Nairobi. We provide expert software development services, server maintenance, IT support, and business automation solutions. Leading software development, server maintenance, and AI innovation in Kenya. Trusted software developers and server maintenance specialists.',
     images: [
       {
         url: '/images/logo/logo.jpeg',
@@ -155,7 +202,7 @@ export default function RootLayout({
       width: 1200,
       height: 630,
     },
-    description: 'StriveGo is one of the top 5 tech companies in Nairobi, Kenya. We build AI automation tools, SaaS platforms, and business growth systems that help companies focus on valuable work.',
+    description: 'StriveGo is one of the top 5 tech companies in Nairobi, Kenya. We provide expert software development services, server maintenance, IT support, and build AI automation tools, SaaS platforms, and business growth systems that help companies focus on valuable work.',
     foundingDate: '2020',
     foundingLocation: {
       '@type': 'Place',
@@ -206,11 +253,16 @@ export default function RootLayout({
       'AI Automation',
       'SaaS Development',
       'Software Development',
+      'Server Maintenance',
+      'IT Support',
+      'Infrastructure Management',
       'Business Automation',
       'Digital Transformation',
       'Mobile App Development',
       'Web Development',
       'AI Consulting',
+      'System Administration',
+      'Cloud Solutions',
     ],
     areaServed: {
       '@type': 'Country',
@@ -284,7 +336,23 @@ export default function RootLayout({
           itemOffered: {
             '@type': 'Service',
             name: 'Software Development',
-            description: 'Custom software development services',
+            description: 'Custom software development services for businesses in Nairobi',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Server Maintenance',
+            description: 'Professional server maintenance and management services in Nairobi',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'IT Support',
+            description: 'Comprehensive IT support and infrastructure management services',
           },
         },
       ],
@@ -332,7 +400,39 @@ export default function RootLayout({
         name: 'What services does StriveGo offer in Nairobi?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'StriveGo offers AI automation systems, SaaS platform development, custom software development, WhatsApp bot integration, M-Pesa payment integration, mobile app development, web development, and business automation consulting services in Nairobi, Kenya.',
+          text: 'StriveGo offers comprehensive technology services including custom software development, server maintenance and management, IT support, AI automation systems, SaaS platform development, WhatsApp bot integration, M-Pesa payment integration, mobile app development, web development, infrastructure management, and business automation consulting services in Nairobi, Kenya.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Do you provide software development services in Nairobi?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, StriveGo is a leading software development company in Nairobi. We provide custom software development, web development, mobile app development, and enterprise software solutions for businesses across Nairobi and Kenya. Our expert software developers build scalable, high-quality applications tailored to your business needs.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Do you offer server maintenance services in Nairobi?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, StriveGo provides professional server maintenance and management services in Nairobi. Our server maintenance experts handle server monitoring, administration, updates, security, and infrastructure management. We offer both on-premises and cloud server maintenance services to ensure your systems run smoothly and securely.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Where can I find help with software development in Nairobi?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'StriveGo is one of the top software development companies in Nairobi providing expert help with software development. We offer software consulting, custom development, and technical support. Contact us for software development services, whether you need web applications, mobile apps, or enterprise software solutions.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Where can I find server maintenance help in Nairobi?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'StriveGo provides server maintenance help and services in Nairobi. Our server maintenance specialists offer 24/7 monitoring, regular maintenance, security updates, performance optimization, and troubleshooting. We help businesses maintain reliable server infrastructure and prevent downtime.',
         },
       },
       {
@@ -391,20 +491,32 @@ export default function RootLayout({
       {
         '@type': 'ListItem',
         position: 1,
+        name: 'Software Development Services',
+        description: 'Custom software development, web development, and mobile app development in Nairobi',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Server Maintenance Services',
+        description: 'Professional server maintenance, management, and IT infrastructure support in Nairobi',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
         name: 'AI Automation',
         description: 'AI-powered automation systems for business processes',
       },
       {
         '@type': 'ListItem',
-        position: 2,
+        position: 4,
         name: 'SaaS Development',
         description: 'Custom SaaS platform development for businesses',
       },
       {
         '@type': 'ListItem',
-        position: 3,
-        name: 'Software Development',
-        description: 'Custom software development services',
+        position: 5,
+        name: 'IT Support',
+        description: 'Comprehensive IT support and infrastructure management services',
       },
     ],
   }
@@ -426,6 +538,52 @@ export default function RootLayout({
       serviceUrl: 'https://strivego.online/contact',
       servicePhone: COMPANY_INFO.phone,
     },
+    description: 'Professional software development, server maintenance, IT support, and AI automation services in Nairobi, Kenya',
+    category: 'Software Development, Server Maintenance, IT Support',
+  }
+
+  const softwareDevelopmentSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: 'Software Development Services',
+    name: 'Software Development Services in Nairobi',
+    description: 'Expert custom software development, web development, and mobile app development services in Nairobi, Kenya',
+    provider: {
+      '@type': 'Organization',
+      name: COMPANY_INFO.name,
+    },
+    areaServed: {
+      '@type': 'City',
+      name: 'Nairobi',
+      '@id': 'https://www.wikidata.org/wiki/Q3870',
+    },
+    availableChannel: {
+      '@type': 'ServiceChannel',
+      serviceUrl: 'https://strivego.online/contact',
+      servicePhone: COMPANY_INFO.phone,
+    },
+  }
+
+  const serverMaintenanceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: 'Server Maintenance Services',
+    name: 'Server Maintenance Services in Nairobi',
+    description: 'Professional server maintenance, server management, and IT infrastructure support services in Nairobi, Kenya',
+    provider: {
+      '@type': 'Organization',
+      name: COMPANY_INFO.name,
+    },
+    areaServed: {
+      '@type': 'City',
+      name: 'Nairobi',
+      '@id': 'https://www.wikidata.org/wiki/Q3870',
+    },
+    availableChannel: {
+      '@type': 'ServiceChannel',
+      serviceUrl: 'https://strivego.online/contact',
+      servicePhone: COMPANY_INFO.phone,
+    },
   }
 
   return (
@@ -439,12 +597,11 @@ export default function RootLayout({
       </head>
       <body>
         <ThemeProvider>
-          <SEOJsonLd data={[orgSchema, localBusinessSchema, websiteSchema, breadcrumbSchema, faqSchema, reviewSchema, itemListSchema, serviceSchema]} />
+          <SEOJsonLd data={[orgSchema, localBusinessSchema, websiteSchema, breadcrumbSchema, faqSchema, reviewSchema, itemListSchema, serviceSchema, softwareDevelopmentSchema, serverMaintenanceSchema]} />
           <Analytics />
           <Navbar />
           <main className="min-h-screen">{children}</main>
           <Footer />
-          <WhatsAppFloating />
         </ThemeProvider>
       </body>
     </html>

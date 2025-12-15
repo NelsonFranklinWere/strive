@@ -5,7 +5,7 @@ import ProductsListing from '@/components/products/ProductsListing'
 export const metadata: Metadata = {
   title: 'AI Automation & SaaS Products | Top Tech Company Nairobi | StriveGo Solutions',
   description:
-    'Explore StriveGo\'s AI automation systems, SaaS products, and business growth tools. As one of the top tech companies in Nairobi, we build solutions that help businesses focus on valuable work by automating workflows.',
+    'Explore StriveGo\'s AI automation systems, SaaS products, software development solutions, and server maintenance services. As one of the top tech companies in Nairobi, we build custom software and provide server maintenance that helps businesses focus on valuable work by automating workflows.',
   keywords: [
     'AI automation tools nairobi',
     'SaaS products nairobi',
@@ -14,12 +14,16 @@ export const metadata: Metadata = {
     'workflow automation',
     'business growth tools',
     'top tech company products nairobi',
+    'software development solutions nairobi',
+    'server maintenance services nairobi',
+    'custom software nairobi',
+    'IT solutions nairobi',
   ],
   alternates: { canonical: '/products' },
   openGraph: {
     title: 'AI Automation & SaaS Products | Top Tech Company Nairobi | StriveGo Solutions',
     description:
-      'Explore StriveGo\'s AI automation systems, SaaS products, and business growth tools. Built by one of the top tech companies in Nairobi.',
+      'Explore StriveGo\'s AI automation systems, SaaS products, software development solutions, and server maintenance services. Built by one of the top tech companies in Nairobi.',
     url: 'https://strivego.online/products',
     images: [{ url: '/images/logo/logo.jpeg', width: 1200, height: 630, alt: 'StriveGo Products - AI Automation Tools' }],
   },

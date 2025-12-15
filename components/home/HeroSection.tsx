@@ -76,7 +76,7 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.8 }}
             >
-              One of the top 5 tech companies in Nairobi, building AI automation tools and SaaS platforms that help businesses focus on growth by automating valuable workflows.
+              One of the top 5 tech companies in Nairobi, providing expert software development services, server maintenance, IT support, and building AI automation tools and SaaS platforms that help businesses focus on growth by automating valuable workflows.
             </motion.p>
 
             <motion.div

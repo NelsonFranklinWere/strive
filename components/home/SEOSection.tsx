@@ -41,9 +41,10 @@ export default function SEOSection() {
             Why StriveGo is Among the <span className="gradient-text">Top Tech Companies in Nairobi</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We help businesses focus on growth by building automation tools and SaaS platforms that handle repetitive tasks, 
-            streamline workflows, and optimize operations. This allows companies to work on valuable, strategic initiatives 
-            that drive real business results.
+            As one of Nairobi's leading software development and server maintenance companies, we help businesses focus on growth 
+            by providing expert software development services, professional server maintenance, IT support, and building automation 
+            tools that handle repetitive tasks, streamline workflows, and optimize operations. Our expert software developers and 
+            server maintenance specialists ensure your technology infrastructure runs smoothly.
           </p>
         </motion.div>
 
@@ -84,15 +85,18 @@ export default function SEOSection() {
             Leading Business Growth Through Automation
           </h3>
           <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto mb-6">
-            As one of the top 10 companies in Nairobi, StriveGo specializes in building tools that help businesses 
-            focus on what matters most. Our AI automation and SaaS platforms eliminate manual work, reduce costs, 
-            and accelerate growth for companies across Kenya and Africa.
+            As one of the top 10 companies in Nairobi, StriveGo specializes in comprehensive software development services, 
+            server maintenance, IT support, and building automation tools that help businesses focus on what matters most. 
+            Whether you need help with software development or server maintenance in Nairobi, our expert team provides 
+            professional solutions that eliminate manual work, reduce costs, and accelerate growth for companies across Kenya and Africa.
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-sm md:text-base">
+            <span className="bg-white/20 px-4 py-2 rounded-full">Software Development Nairobi</span>
+            <span className="bg-white/20 px-4 py-2 rounded-full">Server Maintenance Experts</span>
             <span className="bg-white/20 px-4 py-2 rounded-full">Top Tech Company Nairobi</span>
             <span className="bg-white/20 px-4 py-2 rounded-full">AI Automation Experts</span>
+            <span className="bg-white/20 px-4 py-2 rounded-full">IT Support Services</span>
             <span className="bg-white/20 px-4 py-2 rounded-full">SaaS Development Leaders</span>
-            <span className="bg-white/20 px-4 py-2 rounded-full">Business Growth Tools</span>
           </div>
         </motion.div>
       </div>

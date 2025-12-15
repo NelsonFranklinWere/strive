@@ -43,7 +43,7 @@ export default function WhatWeDo() {
             What We <span className="gradient-text">Do</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            As one of the top tech companies in Nairobi, we provide comprehensive AI solutions and business automation tools tailored for Kenyan SMEs and companies. Our systems help businesses focus on growth by automating repetitive tasks.
+            As one of the top tech companies in Nairobi, we provide comprehensive software development services, server maintenance, IT support, AI solutions, and business automation tools tailored for Kenyan SMEs and companies. Our expert software developers and server maintenance specialists help businesses focus on growth by automating repetitive tasks and maintaining reliable infrastructure.
           </p>
         </motion.div>
 
